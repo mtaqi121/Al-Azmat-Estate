@@ -1,0 +1,11 @@
+{
+  "name": "@workspace/al-azmat-estate",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "build": "node build.mjs",
+    "serve": "node server.mjs dist/public"
+  }
+}

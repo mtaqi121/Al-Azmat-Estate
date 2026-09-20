@@ -1,0 +1,495 @@
+Now improve the existing AL-AZMAT ESTATE website.
+
+IMPORTANT:
+
+Do NOT rebuild the project from scratch.
+
+Do NOT change the technology.
+
+Keep the exact same architecture:
+
+- HTML
+- CSS
+- Vanilla JavaScript
+
+There must still be:
+
+- No React
+- No Vite
+- No Node.js
+- No npm
+- No package.json
+- No framework
+- No backend
+- No database
+
+The website must still work simply by opening:
+
+"index.html"
+
+It must continue working with:
+
+- Replit Preview
+- VS Code Live Server
+- Direct browser opening of index.html
+
+---
+
+STAGE 2 GOAL
+
+Now make the existing website properly interactive and conversion-focused.
+
+Do not unnecessarily redesign the site.
+
+Keep the existing professional AL-AZMAT ESTATE visual identity.
+
+---
+
+IMPORTANT — BRAND COLORS / VISUAL IDENTITY
+
+The current website is using colors chosen by the implementation, but the colors need to be corrected.
+
+Change ONLY the color palette to match the AL-AZMAT ESTATE branding direction below.
+
+AL-AZMAT ESTATE BRANDING / VISUAL DIRECTION
+
+Build the visual styling around:
+
+- Deep Navy / Dark Blue — primary brand color
+- White — primary light color
+- Light neutral background — for clean sections and page backgrounds
+- Subtle grey tones — for secondary text, borders, dividers and supporting UI
+- A small elegant accent color where appropriate
+
+The overall appearance should be:
+
+- Professional
+- Sophisticated
+- Clean
+- Restrained
+- Premium real-estate focused
+
+IMPORTANT COLOR RULES
+
+Do NOT use the current incorrect color palette.
+
+Do NOT use bright or flashy colors.
+
+Do NOT introduce random purple, green, orange, red, bright blue, or gold colors.
+
+Deep navy/dark blue should be the main brand color.
+
+White should remain the main contrasting color.
+
+Use light neutral backgrounds and subtle grey tones to create visual separation.
+
+The accent color must be used sparingly and elegantly, not as a dominant color.
+
+Use the same color system consistently throughout:
+
+- Header
+- Navigation
+- Hero
+- Property cards
+- Search/filter area
+- Buttons
+- Forms
+- Modal
+- FAQ
+- Services
+- About
+- Locations
+- Contact
+- Footer
+- Mobile CTA
+- Hover states
+- Active states
+- Focus states
+- Borders
+
+Do NOT redesign any section just to apply these colors.
+
+Do NOT change the existing layout, spacing, typography, images, content, cards, sections, or overall design unless specifically required by the functionality below.
+
+The goal is simply to correct the color identity while keeping the existing website visually recognizable.
+
+---
+
+1. MOBILE NAVIGATION
+
+Make the hamburger menu fully functional.
+
+Requirements:
+
+- Click hamburger → menu opens.
+- Click again → menu closes.
+- Clicking a navigation link closes the menu.
+- Clicking outside the menu closes it where appropriate.
+- Prevent awkward scrolling behavior.
+- No JavaScript errors.
+
+---
+
+2. SMOOTH NAVIGATION
+
+Make navigation links smoothly scroll to:
+
+Home
+Properties
+Services
+About
+Locations
+Contact
+
+Use section IDs.
+
+Do not create unnecessary pages.
+
+---
+
+3. PROPERTY DATA SYSTEM
+
+Create a clean JavaScript property array.
+
+Example structure:
+
+const properties = [
+{
+id: 1,
+title: "...",
+location: "...",
+purpose: "sale",
+type: "house",
+price: "...",
+bedrooms: 4,
+bathrooms: 4,
+area: "...",
+image: "...",
+description: "..."
+}
+];
+
+Use this data to generate property cards dynamically.
+
+Do NOT duplicate the property data in HTML.
+
+Make it very easy to replace sample properties later.
+
+---
+
+4. PROPERTY FILTERING
+
+Make the search section functional.
+
+Filters:
+
+Purpose:
+
+- All
+- Buy
+- Rent
+
+Location:
+
+- All Locations
+- Gulshan-e-Iqbal
+- Gulistan-e-Johar
+- Scheme 33
+- Bahria Town Karachi
+- DHA
+- DHA City Karachi
+
+Property Type:
+
+- All
+- House
+- Apartment
+- Villa
+- Plot
+- Commercial
+
+Budget:
+Use sensible sample ranges that are clearly editable.
+
+Clicking Search should filter the property cards.
+
+Add:
+
+Clear Filters
+
+button.
+
+If no properties match:
+
+Show a professional message:
+
+No properties match your current filters. Please adjust your search or contact us for assistance.
+
+Do not reload the page.
+
+---
+
+5. PROPERTY DETAILS MODAL
+
+Make every:
+
+View Details
+
+button functional.
+
+Clicking it should open a professional modal.
+
+Show:
+
+- Property image
+- Property title
+- Location
+- Price
+- Purpose
+- Type
+- Bedrooms
+- Bathrooms
+- Area
+- Description
+- Contact button
+- WhatsApp button
+
+Add a close button.
+
+Allow closing with:
+
+- X button
+- Clicking outside
+- Escape key
+
+Prevent background scrolling while modal is open where appropriate.
+
+Make the modal responsive.
+
+---
+
+6. WHATSAPP
+
+Create functional WhatsApp buttons.
+
+Use:
+
+0300-2778818
+
+Convert it to the correct international Pakistan WhatsApp format.
+
+The WhatsApp buttons should open a WhatsApp chat.
+
+For a property, generate a message like:
+
+Hello AL-AZMAT ESTATE, I am interested in [PROPERTY NAME] in [LOCATION]. Please share more details.
+
+Use JavaScript to generate the property-specific message.
+
+Also create a general message:
+
+Hello AL-AZMAT ESTATE, I would like information about your properties.
+
+Use these messages consistently.
+
+---
+
+7. CALL BUTTONS
+
+Make phone buttons use:
+
+"tel:03002778818"
+
+and:
+
+"tel:03352778818"
+
+Make sure they work on mobile.
+
+---
+
+8. CONTACT FORM
+
+Make the contact form properly validate.
+
+Required:
+
+- Name
+- Phone
+- Interest
+- Location
+- Message
+
+Show friendly validation messages.
+
+Do not use browser-default ugly alerts unless necessary.
+
+Use an inline success/error message.
+
+After valid submission:
+
+Show:
+
+Thank you! Your inquiry has been prepared. Please contact us directly through WhatsApp or phone to continue.
+
+Do NOT claim the form was sent to a server.
+
+Clear the form after successful validation.
+
+---
+
+9. FAQ
+
+Make the FAQ accordion fully functional.
+
+Requirements:
+
+- Click question → answer opens.
+- Click again → closes.
+- Opening another question can close the previous one.
+- Smooth animation.
+- Keyboard accessible where possible.
+
+---
+
+10. ACTIVE NAVIGATION
+
+As the visitor scrolls through sections, optionally highlight the current navigation section.
+
+Keep it subtle.
+
+Do not create distracting effects.
+
+---
+
+11. SCROLL ANIMATIONS
+
+Add subtle reveal animations.
+
+Use vanilla JavaScript and IntersectionObserver where appropriate.
+
+Sections/cards can fade upward into view.
+
+Respect:
+
+"prefers-reduced-motion"
+
+If the user prefers reduced motion, minimize animations.
+
+---
+
+12. MOBILE CTA
+
+Add a mobile-only fixed bottom bar:
+
+Call
+WhatsApp
+Inquiry
+
+It should not cover important content.
+
+Add enough bottom spacing where necessary.
+
+---
+
+13. IMAGE HANDLING
+
+Verify every image path.
+
+Make sure there are no broken images.
+
+Use lazy loading for below-the-fold images.
+
+Do not use external image URLs unless absolutely necessary.
+
+---
+
+14. ACCESSIBILITY
+
+Improve:
+
+- Keyboard navigation
+- Button labels
+- Form labels
+- Image alt text
+- Modal accessibility
+- Focus states
+- Color contrast
+
+Do not remove visible focus indicators.
+
+Make sure the new navy/white color palette maintains good text and UI contrast.
+
+---
+
+15. PERFORMANCE
+
+Keep everything lightweight.
+
+Do not install packages.
+
+Do not add libraries.
+
+Do not introduce a build process.
+
+---
+
+16. ERROR CHECK
+
+Before finishing:
+
+Open/test the website.
+
+Check the browser console.
+
+Fix ALL:
+
+- JavaScript errors
+- Missing image errors
+- Broken links
+- Invalid selectors
+- Null element errors
+- Modal errors
+- Filter errors
+- Mobile menu errors
+
+Check that every button does something appropriate.
+
+Also verify that the corrected AL-AZMAT ESTATE navy/white visual identity is applied consistently and that no unrelated/random colors have been introduced.
+
+---
+
+IMPORTANT
+
+Do not change the project to React, Vite or another framework.
+
+Do not create package.json.
+
+Do not make me run npm commands.
+
+Keep the project as:
+
+index.html
+css/style.css
+js/script.js
+assets/images/
+
+Do not rebuild the website.
+
+Do not redesign the website.
+
+Do not change the existing layout or content unnecessarily.
+
+The ONLY visual change requested is to correct the existing color palette to the AL-AZMAT ESTATE branding:
+
+- Deep Navy / Dark Blue
+- White
+- Light Neutral Background
+- Subtle Grey
+- Small Elegant Accent Color
+
+Everything else should remain as it is.
+
+Finish Stage 2 only after checking that the website still works by opening "index.html".
+
+Then stop.

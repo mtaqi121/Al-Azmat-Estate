@@ -156,6 +156,68 @@ summary {
   background: var(--coral);
 }
 
+.contact-modal-panel {
+  background: var(--paper);
+  box-shadow: 0 28px 80px rgba(9, 21, 42, 0.3);
+  max-width: 480px;
+  padding: 38px;
+  position: relative;
+  width: 100%;
+}
+
+.contact-modal-content h2 {
+  color: var(--navy);
+  font-family: var(--display);
+  font-size: 32px;
+  line-height: 1;
+  margin: 0 48px 26px 0;
+}
+
+.contact-modal-row {
+  align-items: center;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 82px 1fr auto;
+  padding: 17px 0;
+}
+
+.contact-modal-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-modal-row > span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact-modal-row > a {
+  color: var(--navy);
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.contact-copy-button {
+  background: var(--white);
+  border: 1px solid var(--line);
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 11px;
+}
+
+.contact-copy-button:hover,
+.contact-copy-button:focus-visible {
+  background: var(--coral-soft);
+}
+
+.contact-modal-row-whatsapp {
+  grid-template-columns: 82px 1fr auto;
+}
+
 .property-modal[hidden] {
   display: none;
 }
@@ -207,17 +269,53 @@ summary {
 
 .modal-content {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: 1.15fr 0.85fr;
 }
 
 .modal-image-wrap {
-  min-height: 430px;
+  min-height: 660px;
+  position: relative;
 }
 
 .modal-image-wrap img {
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  position: absolute;
+  inset: 0;
   width: 100%;
+}
+
+.modal-slider-controls {
+  align-items: center;
+  bottom: 16px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.modal-slider-controls button {
+  background: var(--navy);
+  border: 0;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 18px;
+  height: 34px;
+  width: 34px;
+}
+
+.modal-slider-controls button:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.modal-slider-controls span {
+  background: var(--white);
+  color: var(--navy);
+  font-size: 12px;
+  padding: 7px 10px;
 }
 
 .modal-copy {
@@ -317,7 +415,7 @@ body.modal-open {
 
 @media (max-width: 800px) {
   body {
-    padding-bottom: 68px;
+    padding-bottom: calc(68px + env(safe-area-inset-bottom));
   }
 
   .filter-controls {
@@ -327,7 +425,15 @@ body.modal-open {
 
   .filter-controls label {
     border-left: 0;
+    display: block;
     padding-left: 0;
+  }
+
+  .filter-controls label select {
+    display: block;
+    margin-top: 6px;
+    max-width: none;
+    width: 100%;
   }
 
   .filter-submit,
@@ -351,12 +457,28 @@ body.modal-open {
     max-height: calc(100vh - 32px);
   }
 
+  .contact-modal-panel {
+    padding: 32px 24px;
+  }
+
+  .contact-modal-row-whatsapp {
+    grid-template-columns: 82px minmax(0, 1fr);
+  }
+
+  .contact-modal-row-whatsapp .button {
+    grid-column: 2;
+    justify-self: start;
+    width: 100%;
+    max-width: 146px;
+    min-width: 0;
+  }
+
   .modal-content {
     display: block;
   }
 
   .modal-image-wrap {
-    height: 210px;
+    height: min(55vh, 420px);
     min-height: 0;
   }
 
@@ -421,6 +543,29 @@ body.modal-open {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+}
+
+@media (max-width: 340px) {
+  h1 {
+    font-size: 47px;
+  }
+
+  .hero-intro {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .hero-actions {
+    gap: 14px;
+  }
+
+  .hero-note {
+    margin-top: 18px;
+  }
+
+  .hero-stamp {
+    display: none;
   }
 }
 

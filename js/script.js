@@ -5,118 +5,122 @@
     {
       id: 1,
       image: 'assets/images/property-grid.png',
+      images: ['assets/images/property-grid.png', 'assets/images/property-detail-1.png'],
       alt: 'Sample modern apartment listing',
       purpose: 'sale',
       status: 'For sale',
-      title: 'Modern apartment living',
+      title: 'Modern 2-Bedroom Apartments',
       area: 'Gulshan-e-Iqbal',
       location: 'Gulshan-e-Iqbal · Karachi',
-      price: 'Sample sale · PKR 1.2 crore',
-      priceValue: 12000000,
+      price: 'Price · PKR 80 Lakh - 2.5 Crore',
+      priceValue: 8000000 ,
       type: 'apartment',
       typeLabel: 'Apartment',
       bedrooms: '2 beds',
       bathrooms: '2 baths',
-      areaSize: '1,200 sq ft',
-      description: 'A bright sample apartment brief for buyers seeking a connected Karachi address.'
+      areaSize: '800 sq ft - 1,200 sq ft',
+      description: 'Well-located apartments in Gulshan-e-iqbal with options for different sizes, layouts, and budgets.'
     },
     {
       id: 2,
       image: 'assets/images/property-detail-1.png',
+      images: ['assets/images/property-detail-1.png', 'assets/images/property-detail-2.png'],
       alt: 'Sample family home listing',
       purpose: 'sale',
       status: 'For sale',
-      title: 'Family home, considered',
-      area: 'Gulistan-e-Johar',
-      location: 'Gulistan-e-Johar · Karachi',
-      price: 'Sample sale · PKR 2.8 crore',
-      priceValue: 28000000,
-      type: 'house',
-      typeLabel: 'House',
+      title: 'Spacious 3-Bedroom Apartments',
+      area: 'Gulshan-e-iqbal',
+      location: 'Gulshan-e-iqbal · Karachi',
+      price: 'Price · PKR 1.4 Crore - 3.5 Crore',
+      priceValue: 14000000,
+      type: 'Flat',
+      typeLabel: 'Flat',
       bedrooms: '3 beds',
       bathrooms: '3 baths',
-      areaSize: '2,400 sq ft',
-      description: 'A sample family-home profile with room for everyday living and future plans.'
+      areaSize: '1,200 sq ft - 1,800 sq ft',
+      description: 'Spacious 3-bedroom apartments in Gulshan-e-iqbal with modern layouts and comfortable living spaces'
     },
     {
       id: 3,
       image: 'assets/images/property-detail-2.png',
+      images: ['assets/images/property-detail-2.png', 'assets/images/property-detail-3.png'],
       alt: 'Sample development listing',
       purpose: 'sale',
       status: 'For sale',
-      title: 'Room to grow',
-      area: 'Scheme 33',
-      location: 'Scheme 33 · Karachi',
-      price: 'Sample sale · PKR 4.5 crore',
+      title: 'Elegant Family Residence',
+      area: 'DHA Defence',
+      location: 'DHA Defence · Karachi',
+      price: 'Price · PKR 2.5 Crore - 7 Crore',
       priceValue: 45000000,
-      type: 'house',
+      type: 'Flat',
       typeLabel: 'House',
       bedrooms: '4 beds',
       bathrooms: '4 baths',
-      areaSize: '3,000 sq ft',
-      description: 'A placeholder new-build opportunity for buyers looking for more space.'
+      areaSize: '1,800 sq ft - 2,500 sq ft',
+      description: 'A generously sized family apartment with well-planned rooms, spacious living areas, and a convenient DHA Defence location.'
     },
     {
       id: 4,
       image: 'assets/images/property-detail-3.png',
+      images: ['assets/images/property-detail-3.png', 'assets/images/property-detail-4.png'],
       alt: 'Sample luxury residence listing',
-      purpose: 'rent',
-      status: 'For rent',
-      title: 'A quieter kind of luxury',
-      area: 'DHA',
-      location: 'DHA · Karachi',
-      price: 'Sample rent · PKR 180,000 / month',
+      purpose: 'Sale',
+      status: 'For Sale',
+      title: 'Modern Family Portion',
+      area: 'Gulshan-e-iqbal',
+      location: 'Gulshan-e-iqbal · Karachi',
+      price: 'Price · PKR 1.2 Crore - 4.5 Crore',
       priceValue: 180000,
-      type: 'villa',
-      typeLabel: 'Villa',
-      bedrooms: '4 beds',
-      bathrooms: '4 baths',
-      areaSize: '3,600 sq ft',
-      description: 'A sample rental brief with privacy, generous proportions and a polished finish.'
+      type: 'Portion',
+      typeLabel: 'Portion',
+      bedrooms: '2 beds to 4 beds',
+      bathrooms: '2 baths to 4 baths',
+      areaSize: '120 SQ YD to 240 SQ YD',
+      description: 'A well-maintained portion offering comfortable bedrooms, a bright living space, and practical family-friendly surroundings.'
     },
     {
       id: 5,
       image: 'assets/images/property-detail-4.png',
+      images: ['assets/images/property-detail-4.png', 'assets/images/property-detail-5.png'],
       alt: 'Sample home exterior listing',
       purpose: 'sale',
       status: 'For sale',
-      title: 'Light-filled family place',
-      area: 'Bahria Town Karachi',
-      location: 'Bahria Town Karachi',
-      price: 'Sample sale · PKR 3.5 crore',
+      title: 'Contemporary Family Home',
+      area: 'Gulshan-e-iqbal',
+      location: 'Gulshan-e-iqbal · Karachi',
+      price: 'Price · PKR 3 Crore - 30 Crore',
       priceValue: 35000000,
       type: 'house',
-      typeLabel: 'House',
+      typeLabel: 'House , 1 Unit ',
       bedrooms: '4 beds',
       bathrooms: '4 baths',
-      areaSize: '3,200 sq ft',
-      description: 'A placeholder home profile for families considering a planned community.'
+      areaSize: '120 SQ YD - 1000 SQ YD',
+      description: 'A beautifully designed family home featuring generous living spaces, well-sized bedrooms, modern finishes, and a desirable Gulshan-e-iqbal location'
     },
     {
       id: 6,
       image: 'assets/images/property-detail-6.png',
+      images: ['assets/images/property-detail-6.png', 'assets/images/property-detail-5.png'],
       alt: 'Sample villa listing',
       purpose: 'rent',
       status: 'For rent',
-      title: 'Space for the long view',
-      area: 'DHA City Karachi',
-      location: 'DHA City Karachi',
-      price: 'Sample rent · PKR 250,000 / month',
-      priceValue: 250000,
-      type: 'villa',
-      typeLabel: 'Villa',
-      bedrooms: '5 beds',
-      bathrooms: '5 baths',
+      title: 'Well Maintained Flat | House | Portion | Shops and Commercial for Rent',
+      area: 'Gulshan-e-iqbal',
+      location: 'Gulshan-e-iqbal · Karachi',
+      price: 'Price · PKR 35 Thousand to 30 Lakhs / month',
+      priceValue: 350000,
+      type: 'Hpuse/Flat/Portion/Shops',
+      typeLabel: 'Hpuse/Flat/Portion/Shops',
+      bedrooms: '2 to 5 beds | Shops | Commercial | Offices',
+      bathrooms: '2 to 5 baths ',
       areaSize: '4,500 sq ft',
-      description: 'A sample villa brief for a larger move with room to settle in.'
+      description: 'A well-maintained property offering practical space in a convenient location, suitable for residential or commercial requirements.'
     }
   ];
 
   var whatsappNumber = '923002778818';
   var generalWhatsAppMessage = 'Hello AL-AZMAT ESTATE, I would like information about your properties.';
   var propertyGrid = document.querySelector('#property-grid');
-  var filterForm = document.querySelector('#property-filters');
-  var filterStatus = document.querySelector('#filter-status');
   var revealObserver;
 
   function escapeHtml(value) {
@@ -131,31 +135,9 @@
     });
   }
 
-  function getBudgetMatch(value, budget) {
-    if (budget === 'under-2crore') return value < 20000000;
-    if (budget === '2-to-5crore') return value >= 20000000 && value <= 50000000;
-    if (budget === 'over-5crore') return value > 50000000;
-    return true;
-  }
-
-  function getFilteredProperties() {
-    if (!filterForm) return properties;
-    var purpose = filterForm.querySelector('[name="purpose"]').value;
-    var location = filterForm.querySelector('[name="location"]').value;
-    var type = filterForm.querySelector('[name="type"]').value;
-    var budget = filterForm.querySelector('[name="budget"]').value;
-
-    return properties.filter(function (property) {
-      return (purpose === 'all' || property.purpose === purpose) &&
-        (location === 'all' || property.area === location) &&
-        (type === 'all' || property.type === type) &&
-        getBudgetMatch(property.priceValue, budget);
-    });
-  }
-
   function propertyCard(property, index) {
-    return '<article class="property-card' + (index === 0 ? ' featured' : '') + ' reveal' + (index % 3 === 1 ? ' delay-1' : index % 3 === 2 ? ' delay-2' : '') + '">' +
-      '<div class="property-photo"><img src="' + escapeHtml(property.image) + '" alt="' + escapeHtml(property.alt) + '" loading="lazy" decoding="async"><span class="property-tag">Sample listing</span><span class="property-type">' + escapeHtml(property.status) + '</span></div>' +
+    return '<article tabindex="0" class="property-card' + (index === 0 ? ' featured' : '') + ' reveal' + (index % 3 === 1 ? ' delay-1' : index % 3 === 2 ? ' delay-2' : '') + '">' +
+      '<div class="property-photo"><img src="' + escapeHtml(property.image) + '" alt="' + escapeHtml(property.alt) + '" loading="lazy" decoding="async"><span class="property-tag">Listings</span><span class="property-type">' + escapeHtml(property.status) + '</span></div>' +
       '<div class="property-body"><div><h3>' + escapeHtml(property.title) + '</h3><p>' + escapeHtml(property.location) + '</p><strong class="property-price">' + escapeHtml(property.price) + '</strong></div>' +
       '<div class="property-meta"><span>' + escapeHtml(property.typeLabel) + '</span><span>' + escapeHtml(property.bedrooms) + '</span><span>' + escapeHtml(property.bathrooms) + '</span><span>' + escapeHtml(property.areaSize) + '</span></div>' +
       '<p class="property-description">' + escapeHtml(property.description) + '</p>' +
@@ -187,16 +169,9 @@
 
   function renderProperties(list) {
     if (!propertyGrid) return;
-    if (!list.length) {
-      propertyGrid.innerHTML = '<p class="no-results">No properties match your current filters. Please adjust your search or contact us for assistance.</p>';
-    } else {
-      propertyGrid.innerHTML = list.map(propertyCard).join('');
-      bindPropertyActions();
-      observeReveals();
-    }
-    if (filterStatus) {
-      filterStatus.textContent = list.length ? 'Showing ' + list.length + ' sample ' + (list.length === 1 ? 'property' : 'properties') + '.' : '';
-    }
+    propertyGrid.innerHTML = list.slice(0, 6).map(propertyCard).join('');
+    bindPropertyActions();
+    observeReveals();
   }
 
   function makeWhatsAppUrl(message) {
@@ -216,8 +191,18 @@
   var modalDescription = document.querySelector('#modal-description');
   var modalContact = document.querySelector('#modal-contact');
   var modalWhatsApp = document.querySelector('#modal-whatsapp');
+  var modalPrevious = document.querySelector('#modal-previous');
+  var modalNext = document.querySelector('#modal-next');
+  var modalImageCount = document.querySelector('#modal-image-count');
   var modalClose = modal ? modal.querySelector('.modal-close') : null;
   var lastFocusedElement;
+  var activePropertyImages = [];
+  var activeImageIndex = 0;
+  var contactModal = document.querySelector('#contact-modal');
+  var contactModalClose = contactModal ? contactModal.querySelector('.modal-close') : null;
+  var contactModalTriggers = document.querySelectorAll('[data-contact-popup]');
+  var contactCopyButton = contactModal ? contactModal.querySelector('.contact-copy-button') : null;
+  var lastContactTrigger;
 
   function closeModal() {
     if (!modal || modal.hidden) return;
@@ -226,11 +211,57 @@
     if (lastFocusedElement) lastFocusedElement.focus();
   }
 
+  function closeContactModal() {
+    if (!contactModal || contactModal.hidden) return;
+    contactModal.hidden = true;
+    document.body.classList.remove('modal-open');
+    if (lastContactTrigger) lastContactTrigger.focus();
+  }
+
+  function openContactModal() {
+    if (!contactModal) return;
+    lastContactTrigger = document.activeElement;
+    contactModal.hidden = false;
+    document.body.classList.add('modal-open');
+    contactModalClose.focus();
+  }
+
+  function copyContactPhone() {
+    var phoneNumber = '0300-2778818';
+
+    function showCopyFeedback(message) {
+      contactCopyButton.textContent = message;
+      window.setTimeout(function () { contactCopyButton.textContent = 'Copy'; }, 1800);
+    }
+
+    function copyWithFallback() {
+      var input = document.createElement('textarea');
+      input.value = phoneNumber;
+      input.setAttribute('readonly', '');
+      input.style.position = 'fixed';
+      input.style.opacity = '0';
+      document.body.appendChild(input);
+      input.select();
+      var copied = document.execCommand('copy');
+      input.remove();
+      showCopyFeedback(copied ? 'Copied' : 'Copy failed');
+    }
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(phoneNumber).then(function () {
+        showCopyFeedback('Copied');
+      }).catch(copyWithFallback);
+    } else {
+      copyWithFallback();
+    }
+  }
+
   function openModal(property) {
     if (!modal) return;
     lastFocusedElement = document.activeElement;
-    modalImage.src = property.image;
-    modalImage.alt = property.alt;
+    activePropertyImages = property.images && property.images.length ? property.images : [property.image];
+    activeImageIndex = 0;
+    updateModalImage(property);
     modalTitle.textContent = property.title;
     modalLocation.textContent = property.location;
     modalPrice.textContent = property.price;
@@ -243,6 +274,21 @@
     modalClose.focus();
   }
 
+  function updateModalImage(property) {
+    modalImage.src = activePropertyImages[activeImageIndex];
+    modalImage.alt = property.alt + ' image ' + (activeImageIndex + 1);
+    modalImageCount.textContent = (activeImageIndex + 1) + ' / ' + activePropertyImages.length;
+    modalPrevious.disabled = activePropertyImages.length < 2;
+    modalNext.disabled = activePropertyImages.length < 2;
+  }
+
+  function changeModalImage(direction) {
+    var property = getPropertyById(modalContact.dataset.propertyId);
+    if (!property || activePropertyImages.length < 2) return;
+    activeImageIndex = (activeImageIndex + direction + activePropertyImages.length) % activePropertyImages.length;
+    updateModalImage(property);
+  }
+
   function getPropertyById(id) {
     return properties.find(function (property) { return String(property.id) === String(id); });
   }
@@ -253,6 +299,22 @@
   }
 
   function bindPropertyActions() {
+    document.querySelectorAll('.property-card').forEach(function (card) {
+      function openCard(event) {
+        if (event.target.closest('a, button')) return;
+        var property = getPropertyById(card.dataset.propertyId);
+        if (property) openModal(property);
+      }
+
+      card.dataset.propertyId = card.querySelector('.property-details').dataset.propertyId;
+      card.addEventListener('click', openCard);
+      card.addEventListener('keydown', function (event) {
+        if ((event.key === 'Enter' || event.key === ' ') && !event.target.closest('a, button')) {
+          event.preventDefault();
+          openCard(event);
+        }
+      });
+    });
     document.querySelectorAll('.property-details').forEach(function (button) {
       button.addEventListener('click', function () {
         var property = getPropertyById(button.dataset.propertyId);
@@ -266,6 +328,9 @@
       });
     });
   }
+
+  modalPrevious.addEventListener('click', function () { changeModalImage(-1); });
+  modalNext.addEventListener('click', function () { changeModalImage(1); });
 
   function scrollToTarget(target) {
     if (!target) return;
@@ -304,8 +369,29 @@
     });
   }
 
-  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+  if (contactModalTriggers.length && contactModal) {
+    contactModalTriggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function (event) {
+        event.preventDefault();
+        closeMenu();
+        openContactModal();
+      });
+    });
+    contactModalClose.addEventListener('click', closeContactModal);
+    contactModal.addEventListener('click', function (event) {
+      if (event.target === contactModal) closeContactModal();
+    });
+    contactCopyButton.addEventListener('click', copyContactPhone);
+  }
+
+  document.querySelectorAll('a[href^="#"]:not([data-contact-popup])').forEach(function (link) {
     link.addEventListener('click', function (event) {
+      if (link.closest('.services-section .service-card')) {
+        event.preventDefault();
+        closeMenu();
+        openContactModal();
+        return;
+      }
       var target = document.querySelector(link.getAttribute('href'));
       if (target) {
         event.preventDefault();
@@ -317,17 +403,6 @@
     });
   });
 
-  if (filterForm) {
-    filterForm.addEventListener('submit', function (event) {
-      event.preventDefault();
-      renderProperties(getFilteredProperties());
-    });
-    document.querySelector('#clear-filters').addEventListener('click', function () {
-      filterForm.reset();
-      renderProperties(properties);
-    });
-  }
-
   if (modal) {
     modalClose.addEventListener('click', closeModal);
     modal.addEventListener('click', function (event) {
@@ -336,6 +411,7 @@
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape') {
         closeModal();
+        closeContactModal();
         closeMenu();
       }
       if (event.key === 'Tab' && !modal.hidden) {
@@ -348,6 +424,18 @@
         } else if (!event.shiftKey && document.activeElement === last) {
           event.preventDefault();
           first.focus();
+        }
+      }
+      if (event.key === 'Tab' && contactModal && !contactModal.hidden) {
+        var contactFocusable = contactModal.querySelectorAll('a[href], button:not([disabled])');
+        var contactFirst = contactFocusable[0];
+        var contactLast = contactFocusable[contactFocusable.length - 1];
+        if (event.shiftKey && document.activeElement === contactFirst) {
+          event.preventDefault();
+          contactLast.focus();
+        } else if (!event.shiftKey && document.activeElement === contactLast) {
+          event.preventDefault();
+          contactFirst.focus();
         }
       }
     });
@@ -363,6 +451,8 @@
 
   var form = document.querySelector('#lead-form');
   if (form) {
+    var customLocation = document.querySelector('#custom-location');
+    var locationSelect = document.querySelector('#location');
     var formFields = [
       { id: 'name', message: 'Please enter your name.' },
       { id: 'phone', message: 'Please enter a valid phone number.' },
@@ -382,9 +472,11 @@
       if (fieldConfig.id === 'name') valid = value.length >= 2;
       if (fieldConfig.id === 'phone') valid = /^[0-9+()\s-]{7,}$/.test(value);
       if (fieldConfig.id === 'message') valid = value.length >= 10;
+      if (fieldConfig.id === 'location' && value === 'other') valid = customLocation.value.trim().length > 0;
       var error = document.querySelector('#' + fieldConfig.id + '-error');
       if (valid) {
         clearFieldError(field);
+        if (customLocation) customLocation.removeAttribute('aria-invalid');
       } else {
         field.setAttribute('aria-invalid', 'true');
         if (error) error.textContent = fieldConfig.message;
@@ -394,7 +486,19 @@
     formFields.forEach(function (fieldConfig) {
       var field = document.querySelector('#' + fieldConfig.id);
       field.addEventListener('input', function () { clearFieldError(field); });
-      field.addEventListener('change', function () { clearFieldError(field); });
+      field.addEventListener('change', function () {
+        clearFieldError(field);
+        if (fieldConfig.id === 'location') {
+          customLocation.hidden = field.value !== 'other';
+          customLocation.required = !customLocation.hidden;
+          if (customLocation.hidden) customLocation.value = '';
+          clearFieldError(customLocation);
+        }
+      });
+    });
+    customLocation.addEventListener('input', function () {
+      clearFieldError(locationSelect);
+      clearFieldError(customLocation);
     });
     form.addEventListener('submit', function (event) {
       event.preventDefault();
@@ -403,12 +507,25 @@
       if (valid.indexOf(false) !== -1) {
         status.className = 'form-status is-error';
         status.textContent = 'Please check the highlighted fields and try again.';
-        formFields[valid.indexOf(false)] && document.querySelector('#' + formFields[valid.indexOf(false)].id).focus();
+        var invalidField = formFields[valid.indexOf(false)].id;
+        (invalidField === 'location' && locationSelect.value === 'other' ? customLocation : document.querySelector('#' + invalidField)).focus();
         return;
       }
+      var preferredLocation = locationSelect.value === 'other' ? customLocation.value.trim() : locationSelect.value;
+      var queryMessage = [
+        'Hello AL-AZMAT ESTATE, I would like to make an inquiry.',
+        'Name: ' + document.querySelector('#name').value.trim(),
+        'Phone Number: ' + document.querySelector('#phone').value.trim(),
+        'Interested In: ' + document.querySelector('#need').value.trim(),
+        'Preferred Location: ' + preferredLocation,
+        'Query/Requirement: ' + document.querySelector('#message').value.trim()
+      ].join('\n');
+      window.open(makeWhatsAppUrl(queryMessage), '_blank', 'noopener');
       status.className = 'form-status is-success';
-      status.textContent = 'Thank you! Your inquiry has been prepared. Please contact us directly through WhatsApp or phone to continue.';
+      status.textContent = 'Your query has been prepared in WhatsApp.';
       form.reset();
+      customLocation.hidden = true;
+      customLocation.required = false;
       status.focus();
     });
   }

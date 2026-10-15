@@ -324,6 +324,8 @@
   var lastFocusedElement;
   var activePropertyImages = [];
   var activeImageIndex = 0;
+  var suppressModalImageClick = false;
+  var modalImageSwipeClickTimer = null;
   var contactModal = document.querySelector("#contact-modal");
   var contactModalClose = contactModal
     ? contactModal.querySelector(".modal-close")
@@ -451,11 +453,61 @@
 
   function changeModalImage(direction) {
     var property = getPropertyById(modalContact.dataset.propertyId);
-    if (!property || activePropertyImages.length < 2) return;
+    if (!property || activePropertyImages.length < 2) return false;
     activeImageIndex =
       (activeImageIndex + direction + activePropertyImages.length) %
       activePropertyImages.length;
     updateModalImage(property);
+    if (imageLightbox && !imageLightbox.hidden) {
+      lightboxImage.src = modalImage.src;
+      lightboxImage.alt = modalImage.alt;
+    }
+    return true;
+  }
+
+  function addImageSwipeNavigation(element, onSwipe) {
+    var touchStartX = null;
+    var touchStartY = null;
+
+    element.addEventListener(
+      "touchstart",
+      function (event) {
+        if (event.touches.length !== 1) {
+          touchStartX = null;
+          touchStartY = null;
+          return;
+        }
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
+      },
+      { passive: true },
+    );
+    element.addEventListener(
+      "touchend",
+      function (event) {
+        if (
+          touchStartX === null ||
+          touchStartY === null ||
+          event.changedTouches.length !== 1
+        ) {
+          touchStartX = null;
+          touchStartY = null;
+          return;
+        }
+        var deltaX = event.changedTouches[0].clientX - touchStartX;
+        var deltaY = event.changedTouches[0].clientY - touchStartY;
+        touchStartX = null;
+        touchStartY = null;
+        if (Math.abs(deltaX) < 50 || Math.abs(deltaX) <= Math.abs(deltaY))
+          return;
+        onSwipe(deltaX > 0 ? -1 : 1);
+      },
+      { passive: true },
+    );
+    element.addEventListener("touchcancel", function () {
+      touchStartX = null;
+      touchStartY = null;
+    });
   }
 
   function getPropertyById(id) {
@@ -516,7 +568,24 @@
   modalNext.addEventListener("click", function () {
     changeModalImage(1);
   });
-  modalImage.addEventListener("click", openImageLightbox);
+  addImageSwipeNavigation(modalImage, function (direction) {
+    if (!changeModalImage(direction)) return;
+    suppressModalImageClick = true;
+    window.clearTimeout(modalImageSwipeClickTimer);
+    modalImageSwipeClickTimer = window.setTimeout(function () {
+      suppressModalImageClick = false;
+    }, 500);
+  });
+  addImageSwipeNavigation(lightboxImage, changeModalImage);
+  modalImage.addEventListener("click", function (event) {
+    if (suppressModalImageClick) {
+      event.preventDefault();
+      suppressModalImageClick = false;
+      window.clearTimeout(modalImageSwipeClickTimer);
+      return;
+    }
+    openImageLightbox();
+  });
   modalImage.addEventListener("keydown", function (event) {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();

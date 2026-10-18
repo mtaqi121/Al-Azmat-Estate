@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "AL-AZMAT Estate"
+description = "A responsive real-estate portfolio and lead-generation website for AL-AZMAT ESTATE in Karachi, showcasing properties, services, locations, and easy contact paths."
+version = "1.0.0"
+id = "artifacts/al-azmat-estate"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18096
+
+[services.development]
+run = "pnpm --filter @workspace/al-azmat-estate run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/al-azmat-estate", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/al-azmat-estate/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18096"
+BASE_PATH = "/"

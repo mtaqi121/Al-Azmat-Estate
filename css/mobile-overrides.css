@@ -1,0 +1,25 @@
+@media (max-width: 800px) {
+  .hero {
+    min-height: 0;
+    padding-bottom: 48px;
+  }
+
+  .hero-image-wrap {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: calc(100% - 36px);
+    height: 240px;
+    margin: 48px 18px 0;
+  }
+
+  .hero-stamp {
+    top: 390px;
+    bottom: auto;
+  }
+
+  .hero-note {
+    margin-top: 30px;
+  }
+}

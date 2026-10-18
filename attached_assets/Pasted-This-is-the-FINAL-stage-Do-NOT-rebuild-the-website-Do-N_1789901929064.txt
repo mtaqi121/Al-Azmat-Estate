@@ -1,0 +1,530 @@
+This is the FINAL stage.
+
+Do NOT rebuild the website.
+
+Do NOT change the technology.
+
+Keep it as a pure static website using:
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+
+Absolutely NO:
+
+- React
+- Vite
+- Node
+- npm
+- package.json
+- frameworks
+- backend
+- database
+- build tools
+
+The website must remain directly runnable from:
+
+"index.html"
+
+It must work with:
+
+- Replit Preview
+- VS Code Live Server
+- Direct browser opening of index.html
+
+---
+
+FINAL OBJECTIVE
+
+Treat the existing AL-AZMAT ESTATE website as a professional real-estate website that will receive traffic from Facebook advertisements.
+
+Perform a complete quality-control audit.
+
+Do not add unnecessary features.
+
+Do not make the website more complicated.
+
+Improve what already exists.
+
+This is a final polish, testing, and bug-fixing stage — NOT a redesign.
+
+---
+
+IMPORTANT — DO NOT REDESIGN
+
+The website has already been designed and developed in the previous stages.
+
+Do NOT rebuild sections.
+
+Do NOT change the existing layout unnecessarily.
+
+Do NOT replace the existing content.
+
+Do NOT change the existing typography unnecessarily.
+
+Do NOT replace the existing images.
+
+Do NOT change the existing card design unless there is an actual responsive or functional problem.
+
+Do NOT add unnecessary sections or features.
+
+Only make changes that improve:
+
+- Responsiveness
+- Functionality
+- Accessibility
+- Performance
+- SEO
+- Consistency
+- Stability
+- Conversion clarity
+- Actual bugs or layout problems
+
+---
+
+IMPORTANT — PRESERVE THE AL-AZMAT ESTATE COLOR IDENTITY
+
+Keep the exact AL-AZMAT ESTATE color identity established in Stage 2.
+
+The branding direction is:
+
+- Deep Navy / Dark Blue
+- White
+- Light Neutral Background
+- Subtle Grey Tones
+- Small Elegant Accent Color where appropriate
+
+The overall visual direction must remain:
+
+- Professional
+- Sophisticated
+- Clean
+- Restrained
+- Premium real-estate focused
+
+Do NOT change, redesign, replace, or reinterpret this color palette.
+
+Do NOT introduce a new color scheme during this final stage.
+
+Do NOT introduce random:
+
+- Purple
+- Green
+- Orange
+- Red
+- Bright blue
+- Gold
+- Neon colors
+- Flashy gradients
+
+Keep the navy/white AL-AZMAT ESTATE identity consistent throughout the website.
+
+If you need to fix a UI element, use the existing established color palette.
+
+---
+
+1. DESKTOP AUDIT
+
+Check at:
+
+- 1024px
+- 1280px
+- 1440px
+- 1920px
+
+Check:
+
+- Header
+- Hero
+- Search
+- Properties
+- Services
+- About
+- Advisor
+- Locations
+- CTA
+- Contact
+- FAQ
+- Footer
+
+Fix:
+
+- Bad spacing
+- Misalignment
+- Overflow
+- Incorrect widths
+- Broken grids
+- Poor typography
+- Uneven cards
+- Images stretching
+- Buttons looking inconsistent
+
+Do not redesign the sections while fixing these issues.
+
+---
+
+2. MOBILE AUDIT
+
+Check at:
+
+- 320px
+- 375px
+- 390px
+- 414px
+
+This is extremely important because Facebook advertising traffic can be heavily mobile.
+
+Fix:
+
+- Horizontal scrolling
+- Oversized headings
+- Buttons that are difficult to tap
+- Broken menus
+- Property card overflow
+- Modal overflow
+- Form overflow
+- Images being cropped badly
+- Fixed mobile CTA covering content
+
+Everything must fit naturally.
+
+Do not change the overall mobile design unnecessarily.
+
+---
+
+3. FACEBOOK AD CONVERSION AUDIT
+
+Look at the website from the perspective of someone who has just clicked a Facebook advertisement.
+
+Within the first screen, the visitor should understand:
+
+Who is AL-AZMAT ESTATE?
+
+What services do they provide?
+
+Where do they operate?
+
+How do I contact them?
+
+Make sure there are clear CTAs for:
+
+- WhatsApp
+- Phone
+- Property inquiry
+
+Do not make the user hunt for contact information.
+
+Do not add unnecessary popups or aggressive conversion elements.
+
+---
+
+4. WHATSAPP TEST
+
+Verify every WhatsApp button.
+
+The phone number must correspond to:
+
+0300-2778818
+
+Use the correct international format.
+
+Verify:
+
+- General WhatsApp button
+- Property WhatsApp button
+- Mobile WhatsApp button
+
+Make sure the generated property message is correctly encoded.
+
+---
+
+5. PHONE TEST
+
+Verify:
+
+0300-2778818
+
+and:
+
+0335-2778818
+
+Use valid "tel:" links.
+
+---
+
+6. NAVIGATION TEST
+
+Test every navigation link.
+
+Verify:
+
+Home
+Properties
+Services
+About
+Locations
+Contact
+
+No dead links.
+
+No links to pages that don't exist.
+
+No unnecessary multi-page architecture.
+
+---
+
+7. PROPERTY TEST
+
+Test:
+
+- Property cards
+- Search
+- Filters
+- Clear filters
+- View Details
+- Modal
+- Close modal
+- Escape key
+- Property WhatsApp button
+
+Test with:
+
+- No matching properties
+- Multiple matching properties
+- All properties
+
+Make sure there are no console errors.
+
+---
+
+8. FORM TEST
+
+Test:
+
+- Empty form
+- Missing phone
+- Missing name
+- Missing interest
+- Missing location
+- Missing message
+- Valid submission
+
+Make sure the form never crashes.
+
+Do not pretend data is being stored.
+
+---
+
+9. FAQ TEST
+
+Test every FAQ.
+
+Make sure:
+
+- Answers open
+- Answers close
+- No layout jump problems
+- No JavaScript errors
+
+---
+
+10. SEO AUDIT
+
+Check:
+
+- "<title>"
+- Meta description
+- Open Graph tags
+- H1
+- H2 hierarchy
+- Image alt attributes
+- Semantic HTML
+
+Use:
+
+AL-AZMAT ESTATE | Property Sale, Purchase & Rent in Karachi
+
+Do not use keyword stuffing.
+
+---
+
+11. ASSET AUDIT
+
+Check every file in:
+
+"assets/images/"
+
+Make sure all required images are correctly referenced.
+
+Remove references to files that don't exist.
+
+Do not use absolute paths.
+
+Use relative paths only.
+
+The project should work if the entire project folder is copied to another computer.
+
+---
+
+12. CODE AUDIT
+
+Review:
+
+"index.html"
+
+"css/style.css"
+
+"js/script.js"
+
+Look for:
+
+- Duplicate code
+- Broken selectors
+- Missing semicolons where relevant
+- Invalid HTML
+- Invalid CSS
+- JavaScript errors
+- Unused code that can safely be removed
+- Broken paths
+- Hard-coded duplicated property information
+
+Keep the code readable.
+
+Do not over-engineer it.
+
+---
+
+13. RUNNING REQUIREMENT
+
+This is extremely important.
+
+The finished project must NOT depend on:
+
+"npm install"
+
+"npm run dev"
+
+"npm start"
+
+"vite"
+
+"node"
+
+or any build command.
+
+The website should simply work when:
+
+1. Opening "index.html" directly.
+2. Using VS Code Live Server.
+3. Using Replit Preview.
+
+If something currently requires a server, remove that unnecessary dependency unless it is genuinely required.
+
+Do NOT introduce a server just for convenience.
+
+---
+
+14. FINAL FILE STRUCTURE
+
+The final project should remain approximately:
+
+AL-AZMAT-ESTATE/
+│
+├── index.html
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+└── assets/
+└── images/
+└── supplied AL-AZMAT ESTATE images
+
+No "node_modules".
+
+No "package.json".
+
+No framework files.
+
+No build folder is required.
+
+---
+
+15. FINAL VISUAL QUALITY
+
+The website should feel:
+
+Professional
+Premium
+Trustworthy
+Modern
+Clean
+Real-estate focused
+
+It should NOT feel:
+
+- Like a school project
+- Like a generic HTML template
+- Overdesigned
+- AI-generated
+- Full of unnecessary animations
+- Cluttered
+
+Keep the exact navy/white AL-AZMAT ESTATE color identity established in Stage 2.
+
+Do NOT change, redesign, replace, or reinterpret the color palette.
+
+Do NOT introduce a new visual identity.
+
+Do NOT change the colors simply because you think another palette would look better.
+
+The final stage is for polishing and fixing the existing website, not changing its established branding.
+
+---
+
+16. FINAL RULE
+
+Do not stop at identifying problems.
+
+If you find a problem, FIX IT.
+
+After fixing everything, perform one final check for:
+
+- Console errors
+- Broken images
+- Broken buttons
+- Broken navigation
+- Mobile overflow
+- Desktop overflow
+- Form errors
+- Filter errors
+- Modal errors
+- FAQ errors
+
+Only finish when the website is stable.
+
+Do NOT change the established:
+
+- Color palette
+- Branding
+- Layout
+- Typography
+- Images
+- Content
+- Overall visual identity
+
+unless a change is genuinely required to fix an actual functional, accessibility, responsiveness, or technical problem.
+
+Do not add unnecessary features.
+
+Do not redesign working sections.
+
+Do not rebuild the website.
+
+The final result must be a standalone static website that can be copied to another computer and opened through "index.html" without installing anything.
+
+Do not add npm, Node, React, Vite or any other dependency.
+
+This is the final production-ready version.

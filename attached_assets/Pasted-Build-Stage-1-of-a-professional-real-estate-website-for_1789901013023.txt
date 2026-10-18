@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Build Stage 1 of a professional real-estate website for AL-AZMAT ESTATE.
 
 CRITICAL REQUIREMENT — RUNNING THE PROJECT
@@ -660,4 +661,668 @@ Do not move to a framework or add a build system just because it seems easier.
 
 The website must remain a simple static HTML/CSS/JS website.
 
+=======
+Build Stage 1 of a professional real-estate website for AL-AZMAT ESTATE.
+
+CRITICAL REQUIREMENT — RUNNING THE PROJECT
+
+This must be a pure static website.
+
+Use ONLY:
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+
+DO NOT use:
+
+- React
+- Vite
+- Next.js
+- Vue
+- Angular
+- Tailwind
+- Bootstrap
+- jQuery
+- Node.js
+- npm packages
+- package.json
+- build tools
+- bundlers
+- frameworks
+- backend
+- database
+
+There must be NO npm dependency.
+
+The website must work simply by opening:
+
+"index.html"
+
+It must also work with:
+
+- Replit Preview
+- VS Code Live Server
+- A normal browser opening "index.html"
+
+Do NOT create a setup that requires "npm run dev".
+
+Do NOT create a setup that requires "npm install".
+
+The final project must be completely self-contained.
+
+---
+
+PROJECT
+
+Create an original, professional real-estate portfolio and lead-generation website for:
+
+AL-AZMAT ESTATE
+
+The website will mainly be used for visitors coming from Facebook/Instagram advertisements.
+
+The primary goals are:
+
+1. Establish trust.
+2. Present the real-estate business professionally.
+3. Showcase properties.
+4. Explain services.
+5. Show service areas.
+6. Make contacting the business extremely easy.
+7. Work exceptionally well on mobile.
+
+---
+
+BUSINESS INFORMATION
+
+Use these real details:
+
+Business name
+
+AL-AZMAT ESTATE
+
+Services
+
+- Sale
+- Purchase
+- Rent
+- Property Consultancy
+- Construction
+- Renovation
+
+Property Advisor
+
+Azmat Ali
+
+Title
+
+Property Advisor & CEO
+
+Phone
+
+0300-2778818
+
+Phone
+
+0335-2778818
+
+Email
+
+alazmatestate@gmail.com
+
+Website
+
+alazmatestate.com
+
+Office
+
+Shop #4, Waqas Heights,
+Block 13/D-1,
+Gulshan-e-Iqbal, Karachi
+
+Main service areas
+
+- Gulshan-e-Iqbal
+- Gulistan-e-Johar
+- Scheme 33
+- Bahria Town Karachi
+- DHA
+- DHA City Karachi
+
+Do NOT invent:
+
+- Number of clients
+- Years of experience
+- Awards
+- Certifications
+- Testimonials
+- Team members
+- Property statistics
+- Company achievements
+
+Only use information provided here.
+
+---
+
+REFERENCE IMAGES
+
+The project contains reference/brand images from AL-AZMAT ESTATE.
+
+Use the provided images as appropriate.
+
+The references are inspiration only.
+
+DO NOT copy another website.
+
+DO NOT reproduce a reference layout exactly.
+
+Create an original design.
+
+The existing brand direction is professional real estate with a dark/navy blue and white appearance.
+
+---
+
+FILE STRUCTURE
+
+Create exactly this simple structure:
+
+index.html
+
+css/
+style.css
+
+js/
+script.js
+
+assets/
+images/
+
+Place the supplied AL-AZMAT ESTATE images in:
+
+"assets/images/"
+
+Use relative paths only.
+
+Do NOT use absolute computer paths.
+
+Do NOT reference files outside the project.
+
+Do NOT rely on files from the Replit environment that will disappear later.
+
+---
+
+IMPORTANT IMAGE RULE
+
+Use the actual supplied AL-AZMAT ESTATE images where appropriate.
+
+Do not replace them with unrelated random images.
+
+If you need additional property images that are not provided, create clearly marked placeholder image areas that are easy to replace later.
+
+Do not make the website dependent on external image URLs.
+
+---
+
+DESIGN
+
+Create a premium modern real-estate design.
+
+Main visual direction:
+
+- Deep navy
+- White
+- Light gray / neutral backgrounds
+- Subtle accent color
+- Large property photography
+- Elegant typography
+- Generous whitespace
+- Professional cards
+- Clean buttons
+- Strong visual hierarchy
+
+Avoid:
+
+- Excessive gradients
+- Excessive glassmorphism
+- Neon colors
+- Excessive shadows
+- Huge animations
+- AI-looking visual effects
+- Clutter
+
+The site should feel like a real professional property company.
+
+---
+
+HEADER
+
+Create a responsive header.
+
+Logo/business name:
+
+AL-AZMAT ESTATE
+
+Navigation:
+
+Home
+Properties
+Services
+About
+Locations
+Contact
+
+Add a prominent contact button:
+
+Contact Us
+
+On mobile:
+
+Use a hamburger menu.
+
+The mobile menu must work with vanilla JavaScript.
+
+---
+
+HERO
+
+Create a premium full-width hero section.
+
+Use one of the supplied property images as the hero background/image.
+
+Headline:
+
+Find the Right Property in Karachi
+
+Supporting text:
+
+AL-AZMAT ESTATE provides professional solutions for property sale, purchase, rent, consultancy, construction and renovation.
+
+Buttons:
+
+Explore Properties
+
+Contact Us
+
+Also show:
+
+Sale • Purchase • Rent • Consultancy
+
+Make the hero visually impressive without excessive text.
+
+---
+
+PROPERTY SEARCH
+
+Create a modern property discovery bar below the hero.
+
+Include:
+
+Purpose:
+Buy / Rent
+
+Location:
+All Locations
+
+Property Type:
+All Types
+
+Budget:
+Any Budget
+
+Button:
+Search Properties
+
+For Stage 1, the controls only need to look correct.
+
+The actual filtering functionality will be improved in Stage 2.
+
+---
+
+FEATURED PROPERTIES
+
+Create:
+
+Featured Properties
+
+Subtitle:
+
+Explore selected property opportunities through AL-AZMAT ESTATE.
+
+Create 6 professional property cards.
+
+Use clearly replaceable sample property information.
+
+Each card should contain:
+
+- Image
+- Sale/Rent badge
+- Property title
+- Location
+- Price
+- Property type
+- Bedrooms
+- Bathrooms
+- Area
+- Short description
+- View Details button
+- Contact button
+
+IMPORTANT:
+
+Keep all property information in JavaScript data.
+
+Do not duplicate property information throughout HTML.
+
+Make it easy to replace the sample data later.
+
+---
+
+SERVICES
+
+Create:
+
+Our Services
+
+Six cards:
+
+Property Sale
+
+Property Purchase
+
+Property Rental
+
+Property Consultancy
+
+Construction
+
+Renovation
+
+Each card should have:
+
+- Simple icon
+- Title
+- Short professional description
+
+Use SVG or CSS icons.
+
+Do not use emoji.
+
+---
+
+ABOUT
+
+Create:
+
+Your Property, Handled Professionally
+
+Explain that AL-AZMAT ESTATE provides property-related services across key areas of Karachi.
+
+Mention:
+
+- Sale
+- Purchase
+- Rent
+- Consultancy
+- Construction
+- Renovation
+
+Use one supplied image alongside the content.
+
+---
+
+PROPERTY ADVISOR
+
+Create:
+
+Meet Your Property Advisor
+
+Name:
+
+Azmat Ali
+
+Title:
+
+Property Advisor & CEO — AL-AZMAT ESTATE
+
+Create a professional introduction without inventing qualifications or years of experience.
+
+Add:
+
+Contact Property Advisor
+
+button.
+
+---
+
+LOCATIONS
+
+Create:
+
+Explore Our Locations
+
+Display:
+
+Gulshan-e-Iqbal
+Gulistan-e-Johar
+Scheme 33
+Bahria Town Karachi
+DHA
+DHA City Karachi
+
+Use attractive location cards.
+
+---
+
+FEATURED CTA
+
+Create a premium split section:
+
+Image on one side.
+
+Text on the other:
+
+Looking for Your Next Property?
+
+Short description about buying, selling or renting through AL-AZMAT ESTATE.
+
+Buttons:
+
+View Properties
+
+Contact Us
+
+---
+
+CONTACT / LEAD SECTION
+
+Create:
+
+Tell Us What You're Looking For
+
+Form fields:
+
+Full Name
+
+Phone Number
+
+Interested In:
+Buy
+Sell
+Rent
+Property Consultancy
+Construction
+Renovation
+
+Preferred Location
+
+Message
+
+Button:
+
+Send Inquiry
+
+For now this is a front-end form only.
+
+Do NOT pretend it sends data to a server.
+
+We will improve the behavior in Stage 2.
+
+Also show:
+
+0300-2778818
+
+0335-2778818
+
+alazmatestate@gmail.com
+
+---
+
+FAQ
+
+Create an FAQ section with questions related to:
+
+- Services
+- Locations
+- Buying
+- Selling
+- Renting
+- Contacting AL-AZMAT ESTATE
+- Construction and renovation
+
+Create the visual accordion structure.
+
+The actual interaction will be finalized in Stage 2.
+
+---
+
+FINAL CTA
+
+Create:
+
+Ready to Find the Right Property?
+
+Short supporting text.
+
+Buttons:
+
+WhatsApp Us
+
+Call Now
+
+---
+
+FOOTER
+
+Include:
+
+AL-AZMAT ESTATE
+
+Sale • Purchase • Rent • Consultant & Construction
+
+Phone numbers
+
+Email
+
+Office address
+
+Quick navigation
+
+Service areas
+
+Copyright
+
+---
+
+RESPONSIVE DESIGN
+
+The website MUST be responsive.
+
+Test:
+
+- 320px mobile
+- 375px mobile
+- 390px mobile
+- 768px tablet
+- 1024px laptop
+- 1440px desktop
+
+No horizontal scrolling.
+
+No broken layouts.
+
+No text overflowing.
+
+Property cards should become one-column or two-column appropriately.
+
+Navigation must become a mobile menu.
+
+Forms must fit mobile screens.
+
+---
+
+CODE QUALITY
+
+Use semantic HTML5.
+
+Use CSS variables.
+
+Keep CSS organized.
+
+Keep JavaScript organized.
+
+Use meaningful class names.
+
+Do not put huge amounts of CSS inline.
+
+Do not put unnecessary JavaScript inside HTML.
+
+Add comments where helpful.
+
+---
+
+SEO
+
+Add:
+
+Title:
+
+AL-AZMAT ESTATE | Property Sale, Purchase & Rent in Karachi
+
+Meta description describing the actual services and Karachi locations.
+
+Use proper H1, H2 and H3 hierarchy.
+
+Add Open Graph metadata for Facebook sharing.
+
+Use descriptive alt text.
+
+---
+
+STAGE 1 COMPLETION CHECK
+
+Before finishing Stage 1, verify:
+
+1. "index.html" exists.
+2. "css/style.css" exists.
+3. "js/script.js" exists.
+4. "assets/images/" exists.
+5. All image paths are relative and valid.
+6. There is NO package.json.
+7. There is NO npm dependency.
+8. There is NO React.
+9. There is NO Vite.
+10. There is NO framework.
+11. Opening "index.html" works.
+12. Replit Preview works.
+13. VS Code Live Server should work.
+14. There are no console errors.
+15. There is no horizontal scrolling.
+16. Mobile layout works.
+17. Desktop layout works.
+
+Do not move to a framework or add a build system just because it seems easier.
+
+The website must remain a simple static HTML/CSS/JS website.
+
+>>>>>>> 9b9945c27d9e2151b58fea845677f0c7a775badb
 Finish Stage 1 and then stop.

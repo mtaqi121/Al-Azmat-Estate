@@ -1,0 +1,43 @@
+Convert my existing AL-AZMAT ESTATE landing page into a professional, modern dashboard-style real estate website.
+
+**DASHBOARD LAYOUT**
+- Transform the existing landing page into a complete dashboard-style website with a modern top navigation bar, sidebar, and clearly organized sections.
+- Follow current modern website design trends to create a premium, professional, intuitive, and visually appealing user experience.
+- Use modern real estate website design principles for navigation, content organization, spacing, typography, and responsiveness.
+- Maintain the unique AL-AZMAT ESTATE branding and existing visual identity.
+- Organize all existing content into appropriate dashboard sections so visitors can easily navigate the website.
+- Create a clean, professional, responsive layout for desktop, tablet, and mobile.
+
+**WELCOME INTRO ANIMATION**
+- Display a premium welcome screen when visitors open the website.
+- Show my original AL-AZMAT ESTATE logo prominently in the exact center. I will provide my original business card containing the logo.
+- Preserve the logo's original design, colors, proportions, and details exactly.
+- Display the following text beneath the logo:
+
+  WELCOME TO  
+  AL-AZMAT ESTATE
+
+- Add smooth, elegant entrance animations for the logo and welcome text.
+- Keep the welcome screen visible for approximately 4–5 seconds so visitors can clearly see the logo and read the message.
+- Use a sophisticated background that complements the existing navy-blue and white branding.
+- Transition smoothly from the welcome screen into the main dashboard.
+- Show the welcome animation once per new website visit without interrupting navigation.
+- Ensure smooth performance on desktop and mobile.
+
+**WHATSAPP BUTTON**
+- Add a professional WhatsApp button featuring the original WhatsApp logo in its authentic green color and recognizable official design.
+- Keep the button clearly visible and consistent with the AL-AZMAT ESTATE branding.
+- Connect it to the existing WhatsApp contact number.
+- Open a direct WhatsApp chat when visitors click the button.
+- Ensure the button works correctly on desktop and mobile.
+
+**CONTENT AND FUNCTIONALITY**
+- Strictly preserve all existing information, content, property listings, prices, descriptions, images, branding, contact details, links, buttons, popups, forms, and functionality exactly as they currently exist.
+- Keep the existing project structure and technology stack unchanged.
+- Make only the minimum necessary code changes.
+
+**IMPLEMENTATION**
+Inspect the existing code first. Implement the dashboard layout, welcome animation, and WhatsApp button while preserving all existing content and functionality.
+
+**FINAL RESULT**
+Deliver a fully functional, modern AL-AZMAT ESTATE dashboard-style real estate website with organized navigation, clearly defined sections, a premium 4–5 second welcome animation featuring my original logo, and a WhatsApp button with the original WhatsApp logo.

@@ -699,6 +699,18 @@
     });
   }
 
+  var sidebarToggle = document.querySelector(".sidebar-toggle");
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener("click", function () {
+      var collapsed = document.body.classList.toggle("sidebar-collapsed");
+      sidebarToggle.setAttribute("aria-expanded", String(!collapsed));
+      sidebarToggle.setAttribute(
+        "aria-label",
+        collapsed ? "Expand sidebar" : "Collapse sidebar",
+      );
+    });
+  }
+
   if (contactModalTriggers.length && contactModal) {
     contactModalTriggers.forEach(function (trigger) {
       trigger.addEventListener("click", function (event) {

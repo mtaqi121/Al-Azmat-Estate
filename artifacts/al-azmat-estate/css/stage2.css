@@ -626,26 +626,30 @@ body.modal-open {
   --coral-soft: #dce5ed;
   --white: #ffffff;
   --whatsapp: #168b57;
+  --sidebar-width: 248px;
 }
 html { scroll-padding-top: 116px; }
 body { background: #f1f4f6; }
 .site-header { position: static; z-index: 50; }
 .announcement {
-  position: fixed; z-index: 52; top: 0; left: 248px; right: 0;
+  position: fixed; z-index: 52; top: 0; left: var(--sidebar-width); right: 0;
   height: 32px; background: #e3eaf0; color: #526278;
   justify-content: space-between; padding: 0 38px;
-  font-size: 10px; letter-spacing: .08em;
+  font-size: 10px; letter-spacing: .08em; transition: left .24s ease;
 }
 .announcement a { border-color: #8799ad; }
 .nav-wrap {
-  position: fixed; z-index: 51; top: 32px; left: 248px; right: 0;
+  position: fixed; z-index: 51; top: 32px; left: var(--sidebar-width); right: 0;
   width: auto; height: 78px; padding: 0 38px; margin: 0;
   background: rgba(250,251,252,.97); border-bottom: 1px solid var(--line);
   box-shadow: 0 7px 24px rgba(16,33,59,.035); justify-content: flex-start; gap: 24px;
+  transition: left .24s ease;
 }
 .brand { gap: 0; flex: 0 0 auto; }
 .brand .brand-mark { display: block; width: 58px; height: 58px; object-fit: contain; border: 0; border-radius: 0; }
 .brand-light .brand-mark { width: 76px; height: 76px; }
+.brand-logo-frame { display: block; width: 112px; height: 59px; flex: none; overflow: hidden; line-height: 0; }
+.brand-logo-frame .brand-mark { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; border: 0; border-radius: 0; }
 .topbar-caption { display: flex; flex-direction: column; gap: 3px; margin-left: 10px; }
 .topbar-caption .eyebrow { margin: 0; font-size: 8px; letter-spacing: .15em; }
 .topbar-caption .eyebrow > span { width: 18px; }
@@ -656,12 +660,17 @@ body { background: #f1f4f6; }
 .menu-toggle { display: none; }
 .primary-nav {
   position: fixed; z-index: 53; top: 0; bottom: 0; left: 0; right: auto;
-  width: 248px; display: flex; flex-direction: column; align-items: stretch;
+  width: var(--sidebar-width); display: flex; flex-direction: column; align-items: stretch;
   gap: 5px; padding: 132px 18px 26px; overflow-y: auto;
   background: #10213b; color: #d8e0e9; border-right: 1px solid rgba(255,255,255,.08);
-  box-shadow: 7px 0 24px rgba(16,33,59,.08);
+  box-shadow: 7px 0 24px rgba(16,33,59,.08); transition: width .24s ease, padding .24s ease;
 }
-.sidebar-label { margin: 0 12px 9px; color: #93a4b9; font: 700 9px var(--display); letter-spacing: .19em; text-transform: uppercase; }
+.sidebar-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 36px; margin: 0 0 8px; }
+.sidebar-label { margin: 0 12px; color: #93a4b9; font: 700 9px var(--display); letter-spacing: .19em; text-transform: uppercase; }
+.sidebar-toggle { display: grid; place-content: center; gap: 5px; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 4px; background: transparent; color: #c5cfdb; cursor: pointer; transition: background .2s, color .2s; }
+.sidebar-toggle span { display: block; width: 20px; height: 2px; border-radius: 2px; background: currentColor; }
+.sidebar-toggle:hover { background: #1d3557; color: #fff; }
+.sidebar-toggle:focus-visible { outline: 2px solid #dce5ed; outline-offset: 2px; }
 .primary-nav a:not(.nav-cta) {
   position: relative; display: flex; align-items: center; gap: 13px;
   min-height: 43px; padding: 0 12px; border-radius: 3px;
@@ -675,8 +684,23 @@ body { background: #f1f4f6; }
 .sidebar-contact a { color: #eef2f6; font-size: 11px; }
 .sidebar-contact a:last-child { color: #aebbc9; font-size: 10px; }
 .primary-nav .nav-cta { display: flex; justify-content: space-between; align-items: center; margin-top: 0; padding: 13px 14px; border: 1px solid #60738a; color: white; background: transparent; }
-main, .site-footer { margin-left: 248px; }
+main, .site-footer { margin-left: var(--sidebar-width); transition: margin-left .24s ease; }
 main { padding-top: 110px; }
+@media (min-width: 1201px) {
+  body.sidebar-collapsed { --sidebar-width: 76px; }
+  body.sidebar-collapsed .primary-nav { padding-inline: 12px; }
+  body.sidebar-collapsed .sidebar-head { justify-content: center; }
+  body.sidebar-collapsed .sidebar-label,
+  body.sidebar-collapsed .sidebar-contact,
+  body.sidebar-collapsed .primary-nav .nav-cta { display: none; }
+  body.sidebar-collapsed .primary-nav a:not(.nav-cta) { justify-content: center; gap: 0; padding-inline: 0; }
+  body.sidebar-collapsed .primary-nav .nav-label {
+    position: absolute !important; width: 1px !important; height: 1px !important;
+    padding: 0 !important; margin: -1px !important; overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important; clip-path: inset(50%) !important;
+    white-space: nowrap !important; border: 0 !important;
+  }
+}
 .hero { min-height: 640px; }
 .hero-inner, .shell { max-width: 1160px; }
 @media (min-width: 1201px) {
@@ -716,7 +740,8 @@ main { padding-top: 110px; }
 body.welcome-open { overflow: hidden; }
 .welcome-screen.is-leaving { opacity: 0; visibility: hidden; }
 .welcome-content { display: flex; flex-direction: column; align-items: center; text-align: center; animation: welcome-arrive .95s cubic-bezier(.2,.8,.2,1) both; }
-.welcome-content img { width: clamp(140px, 19vw, 224px); height: auto; margin-bottom: 25px; }
+.welcome-logo-frame { display: block; width: clamp(280px, 40vw, 460px); aspect-ratio: 1.9; margin-bottom: 25px; overflow: hidden; }
+.welcome-logo-frame img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
 .welcome-content p { margin: 0 0 7px; color: #78879a; font: 700 10px var(--display); letter-spacing: .28em; }
 .welcome-content h2 { margin: 0; color: var(--navy); font: 600 clamp(22px,3vw,34px) var(--display); letter-spacing: .14em; }
 .welcome-rule { width: 38px; height: 1px; margin-top: 23px; background: #8ea3b8; transform-origin: center; animation: welcome-rule .8s .35s both; }
@@ -731,15 +756,16 @@ body.welcome-open { overflow: hidden; }
   .announcement span { display: block; font-size: 8px; }
   .site-header { position: sticky; top: -30px; }
   .nav-wrap { position: relative; top: auto; left: auto; right: auto; z-index: 55; height: 69px; width: 100%; padding: 0 18px; gap: 11px; }
-  .brand .brand-mark { width: 48px; height: 48px; }
+  .brand-logo-frame { width: 78px; height: 41px; }
   .topbar-caption { margin-left: 0; }
   .topbar-caption .eyebrow { font-size: 7px; margin-bottom: 1px; }
   .topbar-caption strong { font-size: 12px; }
   .topbar-contact { display: none; }
   .menu-toggle { display: block; margin-left: auto; padding: 10px 4px; }
   .menu-toggle span { display: block; width: 24px; height: 2px; margin: 5px; background: var(--navy); }
-  .primary-nav { top: 99px; bottom: auto; left: 12px; right: 12px; width: auto; max-height: calc(100dvh - 115px); padding: 18px; display: none; gap: 2px; background: #10213b; box-shadow: 0 20px 45px rgba(16,33,59,.25); }
-  .primary-nav.is-open { display: flex; }
+  .sidebar-toggle { display: none; }
+  .primary-nav { top: 99px; bottom: auto; left: 12px; right: 12px; width: auto; max-height: calc(100dvh - 115px); padding: 18px; display: flex; gap: 2px; background: #10213b; box-shadow: 0 20px 45px rgba(16,33,59,.25); opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-8px); transition: opacity .18s ease, transform .18s ease, visibility .18s ease; }
+  .primary-nav.is-open { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
   .primary-nav a:not(.nav-cta) { min-height: 42px; }
   .sidebar-label { margin-top: 2px; }
   .sidebar-contact { margin: 13px 8px 8px; }
@@ -752,7 +778,7 @@ body.welcome-open { overflow: hidden; }
   .mobile-cta { display: grid; }
   .mobile-cta svg { display: inline-block; width: 15px; height: 15px; vertical-align: -3px; margin-right: 4px; }
   .mobile-cta a[data-whatsapp-general] svg { color: #25d366; }
-  .welcome-content img { width: 164px; }
+  .welcome-logo-frame { width: min(82vw, 340px); }
 }
 @media (min-width: 801px) and (max-width: 1200px) {
   body { padding-bottom: 0; }
@@ -768,4 +794,5 @@ body.welcome-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .welcome-screen, .welcome-content, .welcome-rule, .welcome-skip { animation: none; transition: none; }
   .whatsapp-float { transition: none; }
+  .announcement, .nav-wrap, .primary-nav, main, .site-footer { transition: none; }
 }

@@ -170,6 +170,8 @@ importers:
         specifier: ~5.9.3
         version: 5.9.3
 
+  artifacts/al-azmat-estate: {}
+
   artifacts/api-server:
     dependencies:
       '@workspace/api-zod':

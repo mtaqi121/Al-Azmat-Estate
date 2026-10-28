@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "AL-AZMAT Estate"
+description = "The AL-AZMAT ESTATE property website for Karachi, updated with organized navigation, the supplied brand logo, and direct contact options while preserving its original property content and static HTML, CSS, and JavaScript."
+version = "1.0.0"
+id = "artifacts/al-azmat-estate"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18096
+
+[services.development]
+run = "pnpm --filter @workspace/al-azmat-estate run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/al-azmat-estate", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/al-azmat-estate/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18096"
+BASE_PATH = "/"

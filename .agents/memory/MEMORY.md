@@ -1,0 +1,1 @@
+- [Estate dashboard responsive layout](estate-responsive-layout.md) — account for the left rail’s reduced content width when balancing hero text and imagery.

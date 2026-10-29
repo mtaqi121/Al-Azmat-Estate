@@ -8,8 +8,9 @@ await rm(outputRoot, { recursive: true, force: true });
 await mkdir(dirname(outputRoot), { recursive: true });
 await mkdir(outputRoot, { recursive: true });
 await cp(join(projectRoot, 'index.html'), join(outputRoot, 'index.html'));
-await cp(join(projectRoot, 'css'), join(outputRoot, 'css'), { recursive: true });
-await cp(join(projectRoot, 'js'), join(outputRoot, 'js'), { recursive: true });
+for (const file of ['style.css', 'mobile-overrides.css', 'stage2.css', 'script.js']) {
+  await cp(join(projectRoot, file), join(outputRoot, file));
+}
 await cp(join(projectRoot, 'assets'), join(outputRoot, 'assets'), { recursive: true });
 await cp(join(projectRoot, 'public'), join(outputRoot, 'public'), { recursive: true });
 

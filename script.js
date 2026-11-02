@@ -372,6 +372,7 @@
   var imageLightbox = document.querySelector("#property-image-lightbox");
   var lightboxImage = document.querySelector("#lightbox-image");
   var lightboxClose = document.querySelector("#lightbox-close");
+  var overlayHistoryKey = "alAzmatOverlay";
   var lightboxReturnFocus;
   var lastFocusedElement;
   var activePropertyImages = [];
@@ -388,28 +389,63 @@
     : null;
   var lastContactTrigger;
 
-  function closeModal() {
+  function overlayHistoryState(state) {
+    return state && typeof state === "object" ? state[overlayHistoryKey] : null;
+  }
+
+  function pushOverlayHistoryState(type, propertyId) {
+    var state =
+      window.history.state && typeof window.history.state === "object"
+        ? Object.assign({}, window.history.state)
+        : {};
+    state[overlayHistoryKey] = type;
+    state.alAzmatPropertyId = propertyId;
+    window.history.pushState(state, "", window.location.href);
+  }
+
+  function closeModal(fromHistory) {
     if (!modal || modal.hidden) return;
-    closeImageLightbox();
+    if (imageLightbox && !imageLightbox.hidden) {
+      closeImageLightbox(fromHistory);
+      return;
+    }
     modal.hidden = true;
     document.body.classList.remove("modal-open");
     if (lastFocusedElement) lastFocusedElement.focus();
+    if (
+      fromHistory !== true &&
+      overlayHistoryState(window.history.state) === "property"
+    ) {
+      window.history.back();
+    }
   }
 
-  function openImageLightbox() {
-    if (!imageLightbox) return;
+  function openImageLightbox(fromHistory) {
+    if (!imageLightbox || !imageLightbox.hidden) return;
     lightboxReturnFocus = document.activeElement;
     lightboxImage.src = modalImage.src;
     lightboxImage.alt = modalImage.alt;
     imageLightbox.hidden = false;
+    if (fromHistory !== true) {
+      pushOverlayHistoryState(
+        "image",
+        modalContact ? modalContact.dataset.propertyId : null,
+      );
+    }
     lightboxClose.focus();
   }
 
-  function closeImageLightbox() {
+  function closeImageLightbox(fromHistory) {
     if (!imageLightbox || imageLightbox.hidden) return;
     imageLightbox.hidden = true;
     if (lightboxReturnFocus) lightboxReturnFocus.focus();
     lightboxReturnFocus = null;
+    if (
+      fromHistory !== true &&
+      overlayHistoryState(window.history.state) === "image"
+    ) {
+      window.history.back();
+    }
   }
 
   function closeContactModal() {
@@ -462,8 +498,8 @@
     }
   }
 
-  function openModal(property) {
-    if (!modal) return;
+  function openModal(property, fromHistory) {
+    if (!modal || !modal.hidden) return;
     lastFocusedElement = document.activeElement;
     activePropertyImages =
       property.images && property.images.length
@@ -492,8 +528,34 @@
     modalWhatsApp.href = makeWhatsAppUrl(propertyWhatsAppMessage(property));
     modal.hidden = false;
     document.body.classList.add("modal-open");
+    if (!fromHistory) pushOverlayHistoryState("property", property.id);
     modalClose.focus();
   }
+
+  window.addEventListener("popstate", function (event) {
+    var overlay = overlayHistoryState(event.state);
+    if (imageLightbox && !imageLightbox.hidden && overlay !== "image") {
+      closeImageLightbox(true);
+      return;
+    }
+    if (modal && !modal.hidden && overlay !== "property" && overlay !== "image") {
+      closeModal(true);
+      return;
+    }
+    if (overlay === "property" && modal && modal.hidden) {
+      var property = getPropertyById(event.state.alAzmatPropertyId);
+      if (property) openModal(property, true);
+    }
+    if (
+      overlay === "image" &&
+      imageLightbox &&
+      imageLightbox.hidden &&
+      modal &&
+      !modal.hidden
+    ) {
+      openImageLightbox(true);
+    }
+  });
 
   function updateModalImage(property) {
     modalImage.src = activePropertyImages[activeImageIndex];
@@ -645,7 +707,9 @@
       openImageLightbox();
     }
   });
-  lightboxClose.addEventListener("click", closeImageLightbox);
+  lightboxClose.addEventListener("click", function () {
+    closeImageLightbox();
+  });
   imageLightbox.addEventListener("click", function (event) {
     if (event.target === imageLightbox) closeImageLightbox();
   });
@@ -740,7 +804,7 @@
         if (target) {
           event.preventDefault();
           closeMenu();
-          closeModal();
+          closeModal(true);
           scrollToTarget(target);
           window.history.replaceState(null, "", link.getAttribute("href"));
         }
@@ -748,7 +812,9 @@
     });
 
   if (modal) {
-    modalClose.addEventListener("click", closeModal);
+    modalClose.addEventListener("click", function () {
+      closeModal();
+    });
     modal.addEventListener("click", function (event) {
       if (event.target === modal) closeModal();
     });
@@ -756,11 +822,17 @@
       if (event.key === "Escape") {
         if (imageLightbox && !imageLightbox.hidden) {
           closeImageLightbox();
-        } else {
-          closeModal();
-          closeContactModal();
-          closeMenu();
+          return;
         }
+        if (modal && !modal.hidden) {
+          closeModal();
+          return;
+        }
+        if (contactModal && !contactModal.hidden) {
+          closeContactModal();
+          return;
+        }
+        closeMenu();
       }
       if (event.key === "Tab" && imageLightbox && !imageLightbox.hidden) {
         event.preventDefault();

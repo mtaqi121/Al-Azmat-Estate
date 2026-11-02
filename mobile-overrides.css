@@ -1,0 +1,87 @@
+@media (max-width: 800px) {
+  .hero {
+    min-height: 0;
+    padding-bottom: 48px;
+  }
+
+  .hero-image-wrap {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: calc(100% - 36px);
+    height: 240px;
+    margin: 48px 18px 0;
+  }
+
+  .hero-stamp {
+    top: 390px;
+    bottom: auto;
+  }
+
+  .hero-note {
+    margin-top: 30px;
+  }
+}
+
+html {
+  overflow-x: clip;
+  scrollbar-gutter: stable;
+}
+
+body {
+  overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+main,
+.site-header,
+.site-footer,
+.shell {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.footer-grid a,
+.footer-grid address {
+  overflow-wrap: anywhere;
+}
+
+.site-footer .brand-mark {
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 800px) {
+  .hero-inner,
+  .section-heading,
+  .about-layout,
+  .advisor-layout,
+  .contact-layout,
+  .faq-layout,
+  .footer-grid,
+  .footer-bottom {
+    min-width: 0;
+  }
+
+  .hero-copy,
+  .section-heading > *,
+  .about-layout > *,
+  .advisor-layout > *,
+  .contact-layout > *,
+  .faq-layout > *,
+  .footer-grid > * {
+    min-width: 0;
+  }
+
+  .hero-actions,
+  .trust-items {
+    flex-wrap: wrap;
+  }
+}

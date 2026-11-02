@@ -1,6 +1,10 @@
 (function () {
   "use strict";
 
+  function assetUrl(path) {
+    return "artifacts/al-azmat-estate/" + path;
+  }
+
   var properties = [
     {
       id: 1,
@@ -268,7 +272,7 @@
       (index % 3 === 1 ? " delay-1" : index % 3 === 2 ? " delay-2" : "") +
       '">' +
       '<div class="property-photo"><img src="' +
-      escapeHtml(property.image) +
+      escapeHtml(assetUrl(property.image)) +
       '" alt="' +
       escapeHtml(property.alt) +
       '" loading="lazy" decoding="async"><span class="property-tag">Listings</span><span class="property-type">' +
@@ -465,6 +469,7 @@
       property.images && property.images.length
         ? property.images
         : [property.image];
+    activePropertyImages = activePropertyImages.map(assetUrl);
     activeImageIndex = 0;
     updateModalImage(property);
     modalTitle.textContent = property.title;
@@ -659,19 +664,26 @@
 
   var menu = document.querySelector(".menu-toggle");
   var nav = document.querySelector("#primary-navigation");
+  var header = document.querySelector(".site-header");
 
   function closeMenu() {
     if (!menu || !nav) return;
     nav.classList.remove("is-open");
+    nav.style.top = "";
     menu.setAttribute("aria-expanded", "false");
     menu.setAttribute("aria-label", "Open navigation");
     document.body.classList.remove("menu-open");
+    if (header) header.style.top = "";
   }
 
   if (menu && nav) {
     menu.addEventListener("click", function (event) {
       event.stopPropagation();
-      var open = nav.classList.toggle("is-open");
+      var open = !nav.classList.contains("is-open");
+      if (open && header) {
+        header.style.top = Math.ceil(header.getBoundingClientRect().top) + "px";
+      }
+      nav.classList.toggle("is-open", open);
       menu.setAttribute("aria-expanded", String(open));
       menu.setAttribute(
         "aria-label",
@@ -681,7 +693,7 @@
       if (open) {
         nav.style.top = Math.ceil(menu.getBoundingClientRect().bottom) + "px";
       } else {
-        nav.style.top = "";
+        closeMenu();
       }
     });
     nav.querySelectorAll("a").forEach(function (link) {

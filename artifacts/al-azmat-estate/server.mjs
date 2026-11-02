@@ -3,7 +3,7 @@ import { createServer } from 'node:http';
 import { extname, join, normalize, resolve } from 'node:path';
 
 const port = Number(process.env.PORT || 8080);
-const root = resolve(process.argv[2] || import.meta.dirname);
+const root = resolve(process.argv[2] || join(import.meta.dirname, '..', '..'));
 const basePath = process.env.BASE_PATH && process.env.BASE_PATH !== '/' ? process.env.BASE_PATH.replace(/\/$/, '') : '';
 const mimeTypes = {
   '.css': 'text/css; charset=utf-8',

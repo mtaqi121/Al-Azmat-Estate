@@ -1,0 +1,26 @@
+1. Collapsible Sidebar
+   - Add a three-line hamburger menu icon to the sidebar.
+   - Make the sidebar collapsible, allowing users to open and close it by clicking the icon.
+   - When collapsed, hide the sidebar labels and keep the main content properly aligned.
+   - When expanded, display the full sidebar with all existing navigation items.
+   - Ensure the toggle works smoothly on desktop and mobile, with a responsive layout and no overlapping elements.
+   - Preserve all existing navigation links and functionality.
+2. Navbar Logo Blending
+   - Improve the existing logo's appearance in the top navigation bar.
+   - Keep the original AL-AZMAT ESTATE logo design, but integrate it naturally into the navbar.
+   - Remove any unnecessary background, borders, or image elements that make the logo look separate from the navbar.
+   - Make the logo blend seamlessly with the navbar's existing colors and styling without distorting its proportions.
+3. Welcome / Intro Screen Logo
+   - The welcome screen currently uses the same full logo image with its original background, making it look disconnected from the website's design.
+   - Use only the original AL-AZMAT ESTATE logo design, removing the unnecessary background from the image if needed.
+   - Make the logo blend naturally into the welcome screen's background.
+   - Keep the existing welcome text, animation, colors, and timing unchanged unless a minor adjustment is necessary to achieve a seamless appearance.
+   - Maintain the professional look and existing branding.
+Important constraints:
+- Preserve all existing website content, images, property details, links, colors, branding, and functionality.
+- Do not change the project structure, architecture, or technology stack.
+- Make only the necessary HTML, CSS, and JavaScript changes.
+- Keep the existing design consistent and responsive.
+- Do not replace the original logo with a different logo or introduce unrelated design elements.
+- Before making changes, inspect the existing implementation and reuse the available assets wherever possible.
+Goal: A smoothly collapsible sidebar with a working hamburger toggle, a navbar logo that blends naturally into its background, and a welcome screen that uses the original logo design without its distracting image background.

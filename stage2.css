@@ -731,6 +731,7 @@ body.welcome-open { overflow: hidden; }
   .announcement { position: relative; left: auto; right: auto; height: 30px; padding: 0 16px; }
   .announcement span { display: block; font-size: 8px; }
   .site-header { position: sticky; top: -30px; }
+  body.menu-open .site-header { position: fixed; left: 0; right: 0; }
   .nav-wrap { position: relative; top: auto; left: auto; right: auto; z-index: 55; height: 69px; width: 100%; padding: 0 18px; gap: 11px; }
   .brand .brand-mark { width: 48px; height: 48px; }
   .topbar-caption { margin-left: 0; }
@@ -739,7 +740,7 @@ body.welcome-open { overflow: hidden; }
   .topbar-contact { display: none; }
   .menu-toggle { display: block; margin-left: auto; padding: 10px 4px; }
   .menu-toggle span { display: block; width: 24px; height: 2px; margin: 5px; background: var(--navy); }
-  .primary-nav { top: 99px; bottom: auto; left: 12px; right: 12px; width: auto; max-height: calc(100dvh - 115px); padding: 18px; display: none; gap: 2px; background: #10213b; box-shadow: 0 20px 45px rgba(16,33,59,.25); }
+  .primary-nav { z-index: 56; top: 99px; bottom: auto; left: 12px; right: 12px; width: auto; max-height: calc(100dvh - 115px); padding: 18px; display: none; gap: 2px; background: #10213b; box-shadow: 0 20px 45px rgba(16,33,59,.25); }
   .primary-nav.is-open { display: flex; }
   .primary-nav a:not(.nav-cta) { min-height: 42px; }
   .sidebar-label { margin-top: 2px; }

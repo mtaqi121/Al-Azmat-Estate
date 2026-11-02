@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "echo 'Static site build does not require package installation'",
+  "buildCommand": "node artifacts/al-azmat-estate/build.mjs",
+  "outputDirectory": "artifacts/al-azmat-estate/dist/public"
+}
